@@ -7,16 +7,25 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
     @IBOutlet weak var volts: UITextField!
     @IBOutlet weak var amps: UITextField!
     @IBOutlet weak var ohms: UITextField!
     @IBOutlet weak var watts: UITextField!
+    @IBOutlet var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.bannerView.adUnitID = "ca-app-pub-9576690340592468/1427825232"
+        self.bannerView.rootViewController = self
+        
+        let request: GADRequest = GADRequest()
+        //request.testDevices = [GAD_SIMULATOR_ID]
+        
+        self.bannerView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
