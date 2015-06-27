@@ -59,6 +59,16 @@ class ViewController: UIViewController {
         presentViewController(invalidAlert, animated: true, completion: nil)
     }
     
+    // more button from UI
+    @IBAction func more() {
+        // TODO: implement more when developer console is setup
+    }
+    
+    // share button from UI
+    @IBAction func share() {
+        // TODO: implement share
+    }
+    
     // reset button from UI
     @IBAction func reset() {
         for view in self.view.subviews as [UIView] {
